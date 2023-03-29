@@ -41,8 +41,8 @@ button {
 .griglia {
   display: none;
   flex-wrap: wrap;
-  width: 800px;
-  height: 800px;
+  width: 500px;
+  height: 500px;
   margin-top: 50px;
 }
 
@@ -52,6 +52,18 @@ button {
   background-color: lightblue;
   border: 1px solid white;
 }
+
+/* .cento {
+  width: calc(100% / 10);
+}
+
+.ottantuno {
+  width: calc(100% / 9);
+}
+
+.quarantanove {
+  width: calc(100% / 7);
+} */
 
 .d-flex {
   display: flex;

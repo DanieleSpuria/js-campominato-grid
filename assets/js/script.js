@@ -18,9 +18,23 @@ const btnReturn = document.getElementById('return');
 const btn100 = document.getElementById('100');
 const btn81 = document.getElementById('81');
 const btn49 = document.getElementById('49');
-btnClick1(btnReturn, btn100, btn81, btn49, griglia);
-cells(100, griglia);
-// cells(81, griglia);
+
+
+
+//************************************************************************ Bottoni ***
+btnClick(btn100, btnReturn, btn100, btn81, btn49, 100, griglia);
+btnClick(btn81, btnReturn, btn100, btn81, btn49, 100, griglia);
+btnClick(btn49, btnReturn, btn100, btn81, btn49, 100, griglia);
+
+btnReturn.addEventListener('click', function() {
+    
+  griglia.classList.remove('d-flex');
+  btnReturn.classList.add('d-none');
+  btn100.classList.remove('d-none');
+  btn81.classList.remove('d-none');
+  btn49.classList.remove('d-none');
+  
+}) 
 
 
 
@@ -42,20 +56,13 @@ function cells(num, box) {
     })
   } 
 }
-function btnClick1(btn1, btn2, btn3, btn4, box) {
+
+function btnClick(btn, btn1, btn2, btn3, btn4, num, box) {
   
-  btn1.addEventListener('click', function() {
-    
-    box.classList.remove('d-flex');
-    btn1.classList.add('d-none');
-    btn2.classList.remove('d-none');
-    btn3.classList.remove('d-none');
-    btn4.classList.remove('d-none');
-    
-  }) 
+  btn.addEventListener('click', function() {
 
-  btn2.addEventListener('click', function() {
-
+    box.innerHTML = '';
+    cells(num, box);
     box.classList.add('d-flex');
     btn1.classList.remove('d-none');
     btn2.classList.add('d-none');
