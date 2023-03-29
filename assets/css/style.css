@@ -24,7 +24,7 @@ button {
 .container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-content: center;
   justify-content: center;
   height: 100%;
 }
@@ -38,31 +38,23 @@ button {
   margin-bottom: 50px;
 }
 
-.griglia {
+.container-griglia {
   display: none;
-  flex-wrap: wrap;
-  width: 500px;
-  height: 500px;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
   margin-top: 50px;
 }
 
+.griglia {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .cell {
-  width: calc(100% / 10);
   aspect-ratio: 1 / 1;
   background-color: lightblue;
   border: 1px solid white;
-}
-
-.cento {
-  width: calc(100% / 10);
-}
-
-.ottantuno {
-  width: calc(100% / 9);
-}
-
-.quarantanove {
-  width: calc(100% / 7);
 }
 
 .d-flex {

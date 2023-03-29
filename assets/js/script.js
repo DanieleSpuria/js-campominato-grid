@@ -12,6 +12,7 @@
 
 //*************************************************************************** Html ***
 const container = document.getElementsByClassName('container')[0];
+const containerGriglia = document.getElementsByClassName('container-griglia')[0];
 const griglia = document.getElementsByClassName('griglia')[0];
 const btnReturn = document.getElementById('return');
       btnReturn.classList.add('d-none');
@@ -22,13 +23,13 @@ const btn49 = document.getElementById('49');
 
 
 //************************************************************************ Bottoni ***
-btnClick(btn100, btnReturn, btn100, btn81, btn49, 100, griglia);
-btnClick(btn81, btnReturn, btn100, btn81, btn49, 81, griglia);
-btnClick(btn49, btnReturn, btn100, btn81, btn49, 49, griglia);
+btnClick(btn100, btnReturn, btn100, btn81, btn49, 100, 'calc(100% / 10)', containerGriglia, griglia, '100%', '100%');
+btnClick(btn81, btnReturn, btn100, btn81, btn49, 81, 'calc(100% / 9)', containerGriglia, griglia, '90%', '90%');
+btnClick(btn49, btnReturn, btn100, btn81, btn49, 49, 'calc(100% / 7)', containerGriglia, griglia, '70%', '70%');
 
 btnReturn.addEventListener('click', function() {
     
-  griglia.classList.remove('d-flex');
+  containerGriglia.classList.remove('d-flex');
   btnReturn.classList.add('d-none');
   btn100.classList.remove('d-none');
   btn81.classList.remove('d-none');
@@ -39,14 +40,15 @@ btnReturn.addEventListener('click', function() {
 
 
 //*********************************************************************** Funzioni ***
-function cells(num, box) {
+function cells(num, width, box2) {
   
   for (let i = 0; i < num; i++) {
     
     const cell = document.createElement('div');
     cell.className = 'cell';
+    cell.style.width = width;
     cell.id = i + 1;
-    box.appendChild(cell);
+    box2.appendChild(cell);
     
     cell.addEventListener('click', function() {
       
@@ -57,12 +59,14 @@ function cells(num, box) {
   } 
 }
 
-function btnClick(btn, btn1, btn2, btn3, btn4, num, box) {
+function btnClick(btn, btn1, btn2, btn3, btn4, num, width, box, box2, widthBox2, heigthBox2) {
   
   btn.addEventListener('click', function() {
 
-    box.innerHTML = '';
-    cells(num, box);
+    box2.innerHTML = '';
+    box2.style.width = widthBox2;
+    box2.style.heigth = heigthBox2;
+    cells(num, width, box2);
     box.classList.add('d-flex');
     btn1.classList.remove('d-none');
     btn2.classList.add('d-none');
