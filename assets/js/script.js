@@ -6,6 +6,7 @@
 5. numerare le celle;
 6. inserire tutto nel click di un bottone;
 7. inserire toggle a click delle celle;
+8. bottoni con diverso numero di celle;
 *************************************************************************************/
 
 
