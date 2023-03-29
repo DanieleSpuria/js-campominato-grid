@@ -11,11 +11,12 @@
 
 
 const container = document.getElementsByClassName('container')[0];
+const griglia = document.getElementsByClassName('griglia')[0];
 const btnReturn = document.getElementById('return');
-btnReturn.classList.add('d-none');
+      btnReturn.classList.add('d-none');
 const btn100 = document.getElementById('100');
-btnClick(btn100, btnReturn, container);
-cell(100);
+btnClick(btn100, btnReturn, griglia);
+cell(100, griglia);
 
 
 
@@ -24,13 +25,13 @@ cell(100);
 
 //*********************************************************************** Funzioni ***
 
-function cell(num) {
+function cell(num, box) {
 
   for (let i = 0; i < num; i++) {
 
     const cell = document.createElement('div');
     cell.className = 'cell';
-    container.appendChild(cell);
+    box.appendChild(cell);
 
   }
 
