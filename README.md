@@ -22,3 +22,4 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - Bottone con click che crea griglia;
 - Bottone che torna indietro;
 - Numerato celle in console;
+- Aggiunto click alle celle con toggle che mostra numero cella in console;
