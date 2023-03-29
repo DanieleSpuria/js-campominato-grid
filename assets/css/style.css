@@ -26,6 +26,7 @@ button {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
+  width: 40%;
   height: 100%;
 }
 
@@ -38,16 +39,8 @@ button {
   margin-bottom: 50px;
 }
 
-.container-griglia {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 40vw;
-  margin-top: 50px;
-}
-
 .griglia {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
 }
 
