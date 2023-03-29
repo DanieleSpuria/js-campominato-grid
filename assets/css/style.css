@@ -18,22 +18,21 @@ button {
   padding: 5px 20px;
 }
 
-.container {
+.container, .btn {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  flex-wrap: wrap;
   width: 40%;
   height: 100%;
   margin: 0 auto;
 }
 
-.btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.btn { 
   width: 100%;
   margin-bottom: 50px;
 }
