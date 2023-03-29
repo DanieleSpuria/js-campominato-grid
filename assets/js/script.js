@@ -12,7 +12,6 @@
 
 
 //*************************************************************************** Html ***
-const container = document.getElementsByClassName('container')[0];
 const btn = document.getElementsByClassName('btn')[0];
 const griglia = document.getElementsByClassName('griglia')[0];
 const btnReturn = document.getElementById('return');
