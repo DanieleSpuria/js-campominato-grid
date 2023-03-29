@@ -20,6 +20,7 @@ const btnReturn = document.getElementById('return');
       btnReturn.classList.add('d-none');
 const btn100 = document.getElementById('100');
 btnClick(btn100, btnReturn, griglia);
+cells(100, griglia);
 
 
 
@@ -48,8 +49,7 @@ function cells(num, box) {
 function btnClick(btn1, btn2, box){
 
   btn1.addEventListener('click', function() {
-
-    cells(100, griglia);
+  
     box.classList.add('d-flex');
     btn1.classList.add('d-none');
     btn2.classList.remove('d-none');
