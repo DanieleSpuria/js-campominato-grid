@@ -1,14 +1,20 @@
 /*************************************************************************************
 1. classi con css;
 2. griglia con for;
-3. numerare le celle;
-3. inserire tutto nel click di un bottone;
-4. inserire toggle a click delle celle;
+3. bottone che crea la griglia;
+4. bottone che ritorna indietro;
+5. numerare le celle;
+6. inserire tutto nel click di un bottone;
+7. inserire toggle a click delle celle;
 *************************************************************************************/
 
 
 
-const container = document.getElementsByClassName('container');
+const container = document.getElementsByClassName('container')[0];
+const btnReturn = document.getElementById('return');
+btnReturn.classList.add('d-none');
+const btn100 = document.getElementById('100');
+btnClick(btn100, btnReturn, container);
 cell(100);
 
 
@@ -24,9 +30,32 @@ function cell(num) {
 
     const cell = document.createElement('div');
     cell.className = 'cell';
-    container[0].appendChild(cell);
+    container.appendChild(cell);
 
   }
+
+}
+
+
+
+function btnClick(btn1, btn2, box){
+
+  btn1.addEventListener('click', function() {
+
+    box.classList.add('d-flex');
+    btn1.classList.add('d-none');
+    btn2.classList.remove('d-none');
+
+  })
+
+  btn2.addEventListener('click', function() {
+
+    box.classList.remove('d-flex');
+    btn1.classList.remove('d-none');
+    btn2.classList.add('d-none');
+
+  })
+  
 
 }
 

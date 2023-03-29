@@ -12,8 +12,13 @@ main {
   background-color: rgb(18, 106, 136);
 }
 
+button {
+  margin: 150px;
+  padding: 5px 20px;
+}
+
 .container {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   width: 800px;
   height: 800px;
@@ -25,4 +30,12 @@ main {
   aspect-ratio: 1 / 1;
   background-color: lightblue;
   border: 1px solid white;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
 }
