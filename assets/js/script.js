@@ -23,8 +23,8 @@ const btn49 = document.getElementById('49');
 
 //************************************************************************ Bottoni ***
 btnClick(btn100, btnReturn, btn100, btn81, btn49, 100, griglia);
-btnClick(btn81, btnReturn, btn100, btn81, btn49, 100, griglia);
-btnClick(btn49, btnReturn, btn100, btn81, btn49, 100, griglia);
+btnClick(btn81, btnReturn, btn100, btn81, btn49, 81, griglia);
+btnClick(btn49, btnReturn, btn100, btn81, btn49, 49, griglia);
 
 btnReturn.addEventListener('click', function() {
     
