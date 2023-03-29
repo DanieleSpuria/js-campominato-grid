@@ -23,3 +23,4 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - Bottone che torna indietro;
 - Numerato celle in console;
 - Aggiunto click alle celle con toggle che mostra numero cella in console;
+- Bottoni 81 e 49;
