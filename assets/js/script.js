@@ -12,6 +12,7 @@
 
 //*************************************************************************** Html ***
 const container = document.getElementsByClassName('container')[0];
+const btn = document.getElementsByClassName('btn')[0];
 const griglia = document.getElementsByClassName('griglia')[0];
 const btnReturn = document.getElementById('return');
       btnReturn.classList.add('d-none');
@@ -22,24 +23,14 @@ const btn49 = document.getElementById('49');
 
 
 //************************************************************************ Bottoni ***
-btnClick(btn100, btnReturn, btn100, btn81, btn49, 100, 'calc(100% / 10)', griglia, '100%');
-btnClick(btn81, btnReturn, btn100, btn81, btn49, 81, 'calc(100% / 9)', griglia, '90%');
-btnClick(btn49, btnReturn, btn100, btn81, btn49, 49, 'calc(100% / 7)', griglia, '70%');
-
-btnReturn.addEventListener('click', function() {
-    
-  griglia.classList.remove('d-flex');
-  btnReturn.classList.add('d-none');
-  btn100.classList.remove('d-none');
-  btn81.classList.remove('d-none');
-  btn49.classList.remove('d-none');
-  
-}) 
+btnClick(btn100, btnReturn, 100, 'calc(100% / 10)', btn, griglia, '100%');
+btnClick(btn81, btnReturn, 81, 'calc(100% / 9)', btn, griglia, '90%');
+btnClick(btn49, btnReturn, 49, 'calc(100% / 7)', btn, griglia, '70%');
 
 
 
 //*********************************************************************** Funzioni ***
-function cells(num, width, box) {
+function cells(num, width, box2) {
   
   for (let i = 0; i < num; i++) {
     
@@ -47,7 +38,7 @@ function cells(num, width, box) {
     cell.className = 'cell';
     cell.style.width = width;
     cell.id = i + 1;
-    box.appendChild(cell);
+    box2.appendChild(cell);
     
     cell.addEventListener('click', function() {
       
@@ -58,18 +49,24 @@ function cells(num, width, box) {
   } 
 }
 
-function btnClick(btn, btn1, btn2, btn3, btn4, num, width, box, widthBox) {
+function btnClick(btn, btn1, num, width, box1, box2, widthBox2) {
   
   btn.addEventListener('click', function() {
 
-    box.innerHTML = '';
-    box.style.width = widthBox;
-    box.classList.add('d-flex');
-    cells(num, width, box);
+    box2.innerHTML = '';
+    box2.style.width = widthBox2;
+    box2.classList.add('d-flex');
+    cells(num, width, box2);
     btn1.classList.remove('d-none');
-    btn2.classList.add('d-none');
-    btn3.classList.add('d-none');
-    btn4.classList.add('d-none');
+    box1.classList.add('d-none');
 
   })  
+
+  btn1.addEventListener('click', function() {
+      
+    box2.classList.remove('d-flex');
+    btn1.classList.add('d-none');
+    box1.classList.remove('d-none');
+    
+  }) 
 }
