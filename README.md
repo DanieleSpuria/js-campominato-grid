@@ -17,4 +17,4 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 
 ## Sviluppo
 
--
+- Inserito in css main, .container, .cell;
