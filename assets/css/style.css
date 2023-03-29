@@ -5,9 +5,6 @@
 }
 
 main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   background-color: rgb(18, 106, 136);
 }
@@ -28,6 +25,7 @@ button {
   justify-content: center;
   width: 40%;
   height: 100%;
+  margin: 0 auto;
 }
 
 .btn {
