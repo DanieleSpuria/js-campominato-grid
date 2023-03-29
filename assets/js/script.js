@@ -1,4 +1,4 @@
-/*************************************************************************************
+/************************************************************************ Sviluppo ***
 1. classi con css;
 2. griglia con for;
 3. bottone che crea la griglia;
@@ -52,20 +52,19 @@ function btnClick(btn, btn1, num, width, box1, box2, widthBox2) {
   
   btn.addEventListener('click', function() {
 
+    box1.classList.add('d-none');
     box2.innerHTML = '';
     box2.style.width = widthBox2;
-    box2.classList.add('d-flex');
-    cells(num, width, box2);
     btn1.classList.remove('d-none');
-    box1.classList.add('d-none');
+    cells(num, width, box2);
 
   })  
 
   btn1.addEventListener('click', function() {
       
-    box2.classList.remove('d-flex');
-    btn1.classList.add('d-none');
     box1.classList.remove('d-none');
+    box2.innerHTML = '';
+    btn1.classList.add('d-none');
     
   }) 
 }

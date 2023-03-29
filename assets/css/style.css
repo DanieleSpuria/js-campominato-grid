@@ -33,7 +33,7 @@ button {
 }
 
 .griglia {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
 }
 
@@ -41,10 +41,6 @@ button {
   aspect-ratio: 1 / 1;
   background-color: lightblue;
   border: 1px solid white;
-}
-
-.d-flex {
-  display: flex;
 }
 
 .d-none {
