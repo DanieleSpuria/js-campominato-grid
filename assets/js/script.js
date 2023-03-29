@@ -14,8 +14,7 @@
 //*************************************************************************** Html ***
 const btn = document.getElementsByClassName('btn')[0];
 const griglia = document.getElementsByClassName('griglia')[0];
-const btnReturn = document.getElementById('return');
-      btnReturn.classList.add('d-none');
+const btnReturn = document.getElementById('return');  
 const btn100 = document.getElementById('100');
 const btn81 = document.getElementById('81');
 const btn49 = document.getElementById('49');
