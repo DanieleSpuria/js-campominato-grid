@@ -10,15 +10,16 @@
 
 
 
+//*************************************************************************** Html ***
+
+
+
 const container = document.getElementsByClassName('container')[0];
 const griglia = document.getElementsByClassName('griglia')[0];
 const btnReturn = document.getElementById('return');
       btnReturn.classList.add('d-none');
 const btn100 = document.getElementById('100');
 btnClick(btn100, btnReturn, griglia);
-
-
-
 
 
 
@@ -33,9 +34,13 @@ function cells(num, box) {
     cell.id = i + 1;
     box.appendChild(cell);
     
-    console.log(cell.id);
-  }
-  
+    cell.addEventListener('click', function() {
+      
+      cell.classList.toggle('active');
+      console.log(cell.id);
+
+    })
+  } 
 }
 
 
@@ -57,8 +62,6 @@ function btnClick(btn1, btn2, box){
     btn1.classList.remove('d-none');
     btn2.classList.add('d-none');
 
-  })
-  
-
+  })  
 }
 
