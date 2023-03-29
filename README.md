@@ -21,3 +21,4 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - Funzione con ciclo for crea la griglia;
 - Bottone con click che crea griglia;
 - Bottone che torna indietro;
+- Numerato celle in console;

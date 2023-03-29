@@ -16,7 +16,6 @@ const btnReturn = document.getElementById('return');
       btnReturn.classList.add('d-none');
 const btn100 = document.getElementById('100');
 btnClick(btn100, btnReturn, griglia);
-cell(100, griglia);
 
 
 
@@ -25,16 +24,18 @@ cell(100, griglia);
 
 //*********************************************************************** Funzioni ***
 
-function cell(num, box) {
-
+function cells(num, box) {
+  
   for (let i = 0; i < num; i++) {
-
+    
     const cell = document.createElement('div');
     cell.className = 'cell';
+    cell.id = i + 1;
     box.appendChild(cell);
-
+    
+    console.log(cell.id);
   }
-
+  
 }
 
 
@@ -43,6 +44,7 @@ function btnClick(btn1, btn2, box){
 
   btn1.addEventListener('click', function() {
 
+    cells(100, griglia);
     box.classList.add('d-flex');
     btn1.classList.add('d-none');
     btn2.classList.remove('d-none');
